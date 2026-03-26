@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Front-End</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<header class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-2">
+      <div class="bg-pink-500 text-white px-3 py-1 rounded-full font-bold">FE</div>
+      <h1 class="text-xl font-bold text-gray-800">Front-End Pro</h1>
+    </div>
+  </div>
+
+  <div class="bg-pink-600 shadow-md">
+  <nav class="max-w-6xl mx-auto flex justify-center gap-8 p-4 text-sm font-semibold text-white">
+    <button class="hover:text-yellow-300 transition" onclick="mostrarPagina('home')">Início</button>
+    <button class="hover:text-yellow-300 transition" onclick="abrirModulo('html')">HTML</button>
+    <button class="hover:text-yellow-300 transition" onclick="abrirModulo('css')">CSS</button>
+    <button class="hover:text-yellow-300 transition" onclick="abrirModulo('js')">JS</button>
+    <button class="hover:text-yellow-300 transition" onclick="abrirModulo('tailwind')">Tailwind</button>
+    <button class="hover:text-yellow-300 transition" onclick="mostrarPagina('cadastro')">Cadastro</button>
+  </nav>
+</div>
+</header>
+
+<div id="home">
+
+<section class="text-center py-20 bg-gradient-to-r from-pink-500 to-pink-400 text-white">
+  <h2 class="text-4xl font-bold mb-4">
+    Comece do Zero e Conquiste sua Renda com Front-End 💻
+  </h2>
+
+  <p class="mb-6 max-w-2xl mx-auto">
+    Aprenda programação do zero ao profissional com projetos reais,
+    mesmo que você nunca tenha visto código antes.
+  </p>
+
+  <button onclick="mostrarPagina('venda')" class="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold">
+    Quero entrar agora
+  </button>
+</section>
+
+<section class="max-w-6xl mx-auto py-16 px-4 grid md:grid-cols-4 gap-6">
+
+<div onclick="abrirModulo('html')" class="bg-white p-6 rounded-xl shadow hover:scale-105 cursor-pointer">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="w-14 mb-3">
+<h3 class="font-bold text-orange-500">HTML Completo</h3>
+<p class="mb-3 text-gray-600">Aqui você aprende toda a base da programação web. Mesmo que nunca tenha visto código antes, você vai entender como construir um site do zero.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Estrutura completa de páginas</li>
+<li>✔ Tags e semântica profissional</li>
+<li>✔ Criação de formulários</li>
+<li>✔ Organização de conteúdo</li>
+<li>✔ Introdução ao SEO</li>
+</ul>
+<p class="mt-3 text-sm text-pink-600 font-semibold"> 👉 Resultado: você já consegue criar páginas reais </p>
+</div>
+
+<div onclick="abrirModulo('css')" class="bg-white p-6 rounded-xl shadow hover:scale-105 cursor-pointer">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="w-14 mb-3">
+<h3 class="font-bold text-blue-500">CSS Profissional</h3>
+<p class="mb-3 text-gray-600">Você vai transformar sites simples em páginas bonitas, modernas e responsivas, com aparência de sites profissionais.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Cores, fontes e estilos</li>
+<li>✔ Layout com Flexbox e Grid</li>
+<li>✔ Responsividade (celular)</li>
+<li>✔ Animações e efeitos</li>
+<li>✔ Design moderno</li>
+</ul>
+<p class="mt-3 text-sm text-pink-600 font-semibold"> 👉 Resultado: sites com aparência profissional </p>
+</div>
+
+<div onclick="abrirModulo('js')" class="bg-white p-6 rounded-xl shadow hover:scale-105 cursor-pointer">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="w-14 mb-3">
+<h3 class="font-bold text-yellow-500">JavaScript Completo</h3>
+<p class="mb-3 text-gray-600">Aqui você aprende a dar vida aos seus projetos, criando interatividade e funcionalidades reais.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Lógica de programação</li>
+<li>✔ Eventos e interações</li>
+<li>✔ Manipulação do DOM</li>
+<li>✔ Projetos práticos</li>
+<li>✔ Funcionalidades reais</li>
+</ul>
+<p class="mt-3 text-sm text-pink-600 font-semibold"> 👉 Resultado: sites interativos e completos </p>
+</div>
+
+<div onclick="abrirModulo('tailwind')" class="bg-white p-6 rounded-xl shadow hover:scale-105 cursor-pointer">
+<img src="https://cdn.simpleicons.org/tailwindcss" class="w-14 mb-3">
+<h3 class="font-bold text-cyan-500">Tailwind CSS Completo</h3>
+<p class="mb-3 text-gray-600">Aprenda a criar sites modernos de forma muito mais rápida usando Tailwind CSS.</p>
+<ul class="text-sm space-y-1">
+<li>✔ Classes utilitárias poderosas</li>
+<li>✔ Responsividade rápida</li>
+<li>✔ Componentes modernos</li>
+</ul>
+<p class="mt-3 text-sm text-pink-600 font-semibold"> 👉 Resultado: você cria sites profissionais em menos tempo </p>
+</div>
+
+</section>
+
+<!-- FAQ -->
+<section class="max-w-4xl mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold text-center mb-10">❓ Perguntas Frequentes</h2>
+
+  <div class="space-y-4">
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold">Preciso saber programar?</h3>
+      <p class="text-gray-600">Não! O curso é do zero, ideal para iniciantes.</p>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold">Vou conseguir trabalhar depois?</h3>
+      <p class="text-gray-600">Sim, você aprenderá habilidades práticas para freelas ou emprego.</p>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold">O acesso é vitalício?</h3>
+      <p class="text-gray-600">Sim, você pode assistir quando quiser, sem prazo.</p>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold">Tem certificado?</h3>
+      <p class="text-gray-600">Sim! Ao finalizar o curso você recebe certificado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CADASTRO NA HOME -->
+<section class="bg-pink-600 text-white py-16 text-center">
+  <h2 class="text-3xl font-bold mb-4">🚀 Comece Agora</h2>
+  <p class="mb-6">Preencha seus dados e dê o primeiro passo na programação</p>
+
+  <div class="max-w-md mx-auto bg-white text-gray-800 p-6 rounded-xl shadow">
+    <input type="text" placeholder="Nome" class="w-full mb-3 p-2 border rounded">
+    <input type="email" placeholder="Email" class="w-full mb-3 p-2 border rounded">
+    <input type="password" placeholder="Senha" class="w-full mb-3 p-2 border rounded">
+    
+    <button onclick="mostrarPagina('cadastro')" class="w-full bg-pink-500 text-white py-2 rounded">
+      Cadastrar
+    </button>
+  </div>
+</section>
+</div>
+
+<div id="venda" class="hidden">
+<section class="bg-pink-600 text-white py-20 text-center">
+<h1 class="text-4xl font-bold mb-4">🚀 Saia do Zero e Ganhe Dinheiro com Front-End</h1>
+<p class="max-w-2xl mx-auto mb-6">Aprenda passo a passo e comece do absoluto zero até criar sites profissionais.</p>
+<button onclick="abrirModulo('html')" class="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold">
+Começar agora
+</button>
+</section>
+
+<section class="max-w-4xl mx-auto py-16 px-4 text-center">
+<h2 class="text-3xl font-bold mb-6">💰 Por que esse curso vale a pena?</h2>
+<p class="mb-4">Você vai aprender uma das habilidades mais valorizadas do mercado.</p>
+<p class="mb-4">Pode trabalhar de casa, como freelancer ou conseguir emprego.</p>
+<p class="mb-4">Mesmo sem experiência, você vai evoluir rapidamente.</p>
+</section>
+
+<section class="bg-white py-16 text-center">
+<h2 class="text-3xl font-bold mb-4">🔥 Oferta</h2>
+<p class="line-through">De R$ 468</p>
+<p class="text-4xl font-bold">Por R$ 234</p>
+
+<button onclick="mostrarPagina('cadastro')" class="mt-6 bg-pink-500 text-white px-6 py-3 rounded-full">
+Garantir vaga
+</button>
+
+</section>
+
+<div class="text-center py-10">
+<button onclick="mostrarPagina('home')" class="bg-gray-800 text-white px-6 py-2 rounded">
+Voltar
+</button>
+</div>
+</div>
+
+<div id="curso" class="hidden max-w-5xl mx-auto py-16 px-4">
+<h2 id="tituloCurso" class="text-3xl font-bold mb-4"></h2>
+<p id="descricaoCurso" class="mb-6"></p>
+
+<div class="bg-white p-6 rounded-xl shadow mb-6">
+<h3 class="font-bold mb-2">📚 O que você vai aprender:</h3>
+<ul id="listaCurso" class="list-disc ml-6"></ul>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow mb-6">
+<p><strong>⏱ Duração:</strong> <span id="duracao"></span></p>
+<p><strong>💰 Valor:</strong> <span id="valor"></span></p>
+<p><strong>🎓 Certificado:</strong> Sim</p>
+<p><strong>📦 Acesso:</strong> Vitalício</p>
+</div>
+
+<div class="flex gap-4">
+<button onclick="mostrarPagina('home')" class="bg-pink-500 text-white px-6 py-2 rounded">
+Voltar
+</button>
+
+<button onclick="proximaPagina()" class="bg-gray-800 text-white px-6 py-2 rounded">
+Próxima Página
+</button>
+</div>
+
+</div>
+
+<!-- CADASTRO -->
+<div id="cadastro" class="hidden">
+
+<section class="text-center py-20 bg-gradient-to-r from-pink-500 to-pink-400 text-white">
+  <h2 class="text-4xl font-bold mb-4">
+    Crie sua conta e comece hoje 🚀
+  </h2>
+
+  <p class="mb-6 max-w-2xl mx-auto">
+    Preencha seus dados abaixo e dê o primeiro passo para se tornar um desenvolvedor Front-End.
+  </p>
+</section>
+
+<section class="max-w-md mx-auto py-16 px-4">
+  <div class="bg-white p-6 rounded-xl shadow-lg">
+
+    <h2 class="text-2xl font-bold mb-6 text-center">Cadastro</h2>
+
+    <input id="nome" type="text" placeholder="Nome" class="w-full mb-3 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+    
+    <input id="email" type="email" placeholder="Email" class="w-full mb-3 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+    
+    <input id="senha" type="password" placeholder="Senha" class="w-full mb-4 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+
+    <button id="btnCadastro" class="w-full bg-pink-500 hover:bg-pink-600 transition text-white py-3 rounded-lg font-semibold">
+      Criar Conta
+    </button>
+
+    <!-- Mensagem de sucesso -->
+    <p id="mensagemSucesso" class="mt-4 text-green-600 font-semibold hidden">
+      ✅ Seu cadastro foi realizado com sucesso! Logo mais um de nossos atendentes entrará em contato com você.
+    </p>
+
+  </div>
+
+  <div class="text-center mt-6">
+    <button onclick="mostrarPagina('home')" class="bg-gray-800 text-white px-6 py-2 rounded">
+      Voltar
+    </button>
+  </div>
+</section>
+
+</div>
+
+<footer class="bg-gray-900 text-white py-6 mt-10">
+ <div class="max-w-6xl mx-auto text-center text-sm">
+ <p class="mb-2">© 2026 Front-End Pro - Todos os direitos reservados</p>
+ <p>Desenvolvido para iniciantes que querem viver de programação 💻</p>
+ </div>
+</footer>
+
+<script>
+
+let cursoAtual = "";
+let paginaAtual = "home";
+
+function mostrarPagina(pagina) {
+  paginaAtual = pagina;
+
+  const paginas = ["home", "venda", "curso", "cadastro"];
+  paginas.forEach(id => {
+    let el = document.getElementById(id);
+    if (el) el.classList.add("hidden");
+  });
+
+  let paginaAtiva = document.getElementById(pagina);
+  if (paginaAtiva) paginaAtiva.classList.remove("hidden");
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function abrirModulo(tipo) {
+  paginaAtual = tipo; 
+  cursoAtual = tipo;
+  mostrarPagina("curso");
+
+  const dados = {
+    html: { 
+        titulo: "🌐 Curso de HTML", 
+        descricao: "Aprenda a criar sites do zero com HTML completo.", 
+        duracao: "10 horas", 
+        valor: "R$ 97", 
+        lista: [
+            "Estrutura completa de um site (doctype, head, body)",
+            "Criação de páginas do zero",
+            "Uso de tags essenciais (div, header, section, footer)",
+            "Links, imagens, listas e tabelas",
+            "Formulários (inputs, botão, envio de dados)",
+            "Semântica HTML (SEO e organização profissional)",
+            "Você será capaz de Criar páginas web estruturadas, Montar a base de qualquer site e Organizar conteúdo de forma profissional"
+        ]
+    },
+    css: { 
+        titulo: "🎨 Curso de CSS", 
+        descricao: "Aprenda design moderno e responsivo com CSS.", 
+        duracao: "15 horas", 
+        valor: "R$ 127", 
+        lista: [
+            "Estilização completa de páginas",
+            "Cores, fontes e espaçamentos",
+            "Box model (margin, padding, border)",
+            "Flexbox e Grid (layouts profissionais)",
+            "Responsividade (mobile first)",
+            "Animações e efeitos visuais",
+            "Você será capaz de Deixar qualquer site bonito e moderno, Criar layouts profissionais e Adaptar sites para celular "
+        ]
+    },
+    js: { 
+        titulo: "⚡ Curso de JavaScript", 
+        descricao: "Aprenda lógica e interatividade do zero.", 
+        duracao: "20 horas", 
+        valor: "R$ 147", 
+        lista: [
+            "Lógica de programação do zero",
+            "Variáveis, funções e condições",
+            "Eventos (cliques, interações)",
+            "Manipulação do DOM",
+            "Validação de formulários",
+            "Criação de funcionalidades reais",
+            "Você será capaz de Criar sites interativos, Fazer sistemas simples e Adicionar funcionalidades dinâmicas"
+        ]
+    },
+    tailwind: { 
+        titulo: "💨 Curso de Tailwind CSS", 
+        descricao: "Crie sites modernos rapidamente com Tailwind.", 
+        duracao: "8 horas", 
+        valor: "R$ 97", 
+        lista: [
+            "Como usar Tailwind na prática",
+            "Classes utilitárias",
+            "Criação rápida de layouts",
+            "Responsividade simplificada",
+            "Customização de design",
+            "Construção de interfaces modernas",
+            "Você será capaz de Criar sites MUITO mais rápido, Fazer designs modernos sem CSS longo e Produzir páginas profissionais com agilidade"
+        ]
+    }
+  };
+
+  let curso = dados[tipo];
+
+  document.getElementById("tituloCurso").innerText = curso.titulo;
+  document.getElementById("descricaoCurso").innerText = curso.descricao;
+  document.getElementById("duracao").innerText = curso.duracao;
+  document.getElementById("valor").innerText = curso.valor;
+
+  let lista = document.getElementById("listaCurso");
+  lista.innerHTML = "";
+
+  curso.lista.forEach(item => {
+    let li = document.createElement("li");
+    li.innerText = item;
+    lista.appendChild(li);
+  });
+}
+
+function proximaPagina() {
+  const ordem = ["home", "html", "css", "js", "tailwind", "cadastro"];
+
+  let atual = paginaAtual;
+
+  // se estiver dentro da página "curso", usa o módulo atual
+  if (paginaAtual === "curso") {
+    atual = cursoAtual;
+  }
+
+  let index = ordem.indexOf(atual);
+  let proxima = ordem[(index + 1) % ordem.length];
+
+  if (proxima === "home") {
+    mostrarPagina("home");
+  } else if (proxima === "cadastro") {
+    mostrarPagina("cadastro");
+  } else {
+    abrirModulo(proxima);
+  }
+}
+
+  // Função para exibir mensagem de cadastro
+  document.getElementById("btnCadastro").addEventListener("click", function() {
+    // Aqui você poderia adicionar validação ou envio para backend
+    document.getElementById("mensagemSucesso").classList.remove("hidden");
+
+    // Limpar campos após cadastro
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("senha").value = "";
+  });
+</script>
+
+</body>
+</html>
