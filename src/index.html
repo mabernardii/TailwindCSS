@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Front-End</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50 text-gray-800">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-2">
+      <div class="bg-pink-500 text-white font-bold px-3 py-1 rounded-full">FE</div>
+      <h1 class="text-xl font-bold text-pink-600">Front-End Pro</h1>
+    </div>
+
+    <nav class="space-x-6">
+      <button onclick="mostrarInicio()" class="hover:text-pink-500">Início</button>
+      <button onclick="mostrarDetalhes()" class="hover:text-pink-500">Curso</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="home">
+
+<!-- HERO -->
+<section class="text-center py-20 bg-gradient-to-r from-pink-500 to-pink-400 text-white">
+  <h2 class="text-4xl font-bold mb-4">
+    Comece do Zero e Conquiste sua Renda com Front-End 💻
+  </h2>
+
+  <p class="mb-6 text-lg max-w-2xl mx-auto">
+    Um curso completo para quem quer aprender programação de forma simples, prática e direta ao ponto. 
+    Você vai sair do zero e aprender a criar sites profissionais que podem gerar renda real.
+  </p>
+
+  <button onclick="mostrarDetalhes()"
+    class="bg-white text-pink-600 px-6 py-3 rounded-full font-semibold transition hover:bg-pink-200">
+    Quero entrar agora
+  </button>
+</section>
+
+<!-- CARDS MELHORADOS -->
+<section class="max-w-6xl mx-auto py-16 px-4 grid md:grid-cols-3 gap-10">
+
+  <!-- HTML -->
+  <div onclick="abrirModulo('html')" 
+  class="bg-white p-8 rounded-2xl shadow-xl cursor-pointer hover:scale-105 hover:shadow-2xl transition">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="w-16 mb-4">
+
+    <h3 class="text-2xl font-bold text-orange-500 mb-3">HTML Completo</h3>
+
+    <p class="mb-3 text-gray-600">
+      Aqui você aprende toda a base da programação web. Mesmo que nunca tenha visto código antes, 
+      você vai entender como construir um site do zero.
+    </p>
+
+    <ul class="text-sm space-y-1">
+      <li>✔ Estrutura completa de páginas</li>
+      <li>✔ Tags e semântica profissional</li>
+      <li>✔ Criação de formulários</li>
+      <li>✔ Organização de conteúdo</li>
+      <li>✔ Introdução ao SEO</li>
+    </ul>
+
+    <p class="mt-3 text-sm text-pink-600 font-semibold">
+      👉 Resultado: você já consegue criar páginas reais
+    </p>
+  </div>
+
+  <!-- CSS -->
+  <div onclick="abrirModulo('css')" 
+  class="bg-white p-8 rounded-2xl shadow-xl cursor-pointer hover:scale-105 hover:shadow-2xl transition">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="w-16 mb-4">
+
+    <h3 class="text-2xl font-bold text-blue-500 mb-3">CSS Profissional</h3>
+
+    <p class="mb-3 text-gray-600">
+      Você vai transformar sites simples em páginas bonitas, modernas e responsivas, 
+      com aparência de sites profissionais.
+    </p>
+
+    <ul class="text-sm space-y-1">
+      <li>✔ Cores, fontes e estilos</li>
+      <li>✔ Layout com Flexbox e Grid</li>
+      <li>✔ Responsividade (celular)</li>
+      <li>✔ Animações e efeitos</li>
+      <li>✔ Design moderno</li>
+    </ul>
+
+    <p class="mt-3 text-sm text-pink-600 font-semibold">
+      👉 Resultado: sites com aparência profissional
+    </p>
+  </div>
+
+  <!-- JS -->
+  <div onclick="abrirModulo('js')" 
+  class="bg-white p-8 rounded-2xl shadow-xl cursor-pointer hover:scale-105 hover:shadow-2xl transition">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="w-16 mb-4">
+
+    <h3 class="text-2xl font-bold text-yellow-500 mb-3">JavaScript Completo</h3>
+
+    <p class="mb-3 text-gray-600">
+      Aqui você aprende a dar vida aos seus projetos, criando interatividade e funcionalidades reais.
+    </p>
+
+    <ul class="text-sm space-y-1">
+      <li>✔ Lógica de programação</li>
+      <li>✔ Eventos e interações</li>
+      <li>✔ Manipulação do DOM</li>
+      <li>✔ Projetos práticos</li>
+      <li>✔ Funcionalidades reais</li>
+    </ul>
+
+    <p class="mt-3 text-sm text-pink-600 font-semibold">
+      👉 Resultado: sites interativos e completos
+    </p>
+  </div>
+
+  <!-- TAILWIND (NOVO CARD) -->
+  <div onclick="abrirModulo('tailwind')" 
+  class="bg-white p-8 rounded-2xl shadow-xl cursor-pointer hover:scale-105 hover:shadow-2xl transition">
+
+    <img src="https://cdn.simpleicons.org/tailwindcss" class="w-16 mb-4">
+
+    <h3 class="text-2xl font-bold text-cyan-500 mb-3">Tailwind CSS Completo</h3>
+
+    <p class="mb-3 text-gray-600">
+      Aprenda a criar sites modernos de forma muito mais rápida usando Tailwind CSS, 
+      uma das ferramentas mais utilizadas por desenvolvedores profissionais atualmente.
+    </p>
+
+    <ul class="text-sm space-y-1">
+      <li>✔ Criação de layouts sem CSS tradicional</li>
+      <li>✔ Classes utilitárias poderosas</li>
+      <li>✔ Responsividade rápida e prática</li>
+      <li>✔ Componentes modernos e reutilizáveis</li>
+      <li>✔ Padrões reais do mercado</li>
+    </ul>
+
+    <p class="mt-3 text-sm text-pink-600 font-semibold">
+      👉 Resultado: você cria sites profissionais em menos tempo
+    </p>
+  </div>
+
+</section>
+
+</div>
+
+<!-- DETALHES -->
+<div id="detalhes" class="hidden max-w-4xl mx-auto py-16 px-4">
+
+  <h2 class="text-3xl font-bold text-pink-600 mb-4">
+    Um curso pensado para transformar sua realidade 🚀
+  </h2>
+
+  <p class="mb-6">
+    O Front-End Pro foi criado para quem quer sair do zero e aprender uma profissão que realmente dá dinheiro.
+    Você vai aprender com prática, exemplos reais e projetos que podem entrar no seu portfólio.
+  </p>
+
+  <ul class="list-disc ml-6 mb-6">
+    <li>✔ Aulas simples e diretas</li>
+    <li>✔ Projetos reais</li>
+    <li>✔ Certificado</li>
+    <li>✔ Possibilidade de renda extra</li>
+    <li>✔ Suporte e direcionamento</li>
+  </ul>
+
+  <button onclick="mostrarInicio()"
+    class="bg-pink-500 text-white px-6 py-2 rounded hover:bg-pink-600">
+    Voltar
+  </button>
+
+</div>
+
+<!-- CONTATO BONITO -->
+<section class="bg-pink-500 text-white py-12 text-center">
+
+  <h3 class="text-2xl font-bold mb-6">Entre em contato 💬</h3>
+
+  <div class="max-w-md mx-auto bg-white text-gray-800 p-6 rounded-xl shadow-xl">
+    <p class="mb-2"><strong>📱 WhatsApp:</strong> 15 98111-2101</p>
+    <p class="mb-2"><strong>📧 Email:</strong> manuela.bernardi1a@gmail.com</p>
+    <p class="text-sm mt-4">Tire suas dúvidas ou faça sua matrícula agora mesmo.</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center py-6">
+  <p>© 2026 - Desenvolvido por Manu Bernardi 💻</p>
+  <p class="text-sm mt-2">Front-End Pro | Transformando vidas com tecnologia</p>
+</footer>
+
+<!-- JS -->
+<script>
+function mostrarDetalhes() {
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("detalhes").classList.remove("hidden");
+}
+
+function mostrarInicio() {
+  document.getElementById("home").classList.remove("hidden");
+  document.getElementById("detalhes").classList.add("hidden");
+}
+
+function abrirModulo(tipo) {
+  mostrarDetalhes();
+}
+</script>
+
+</body>
+
+</html>
